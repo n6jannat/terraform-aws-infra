@@ -1,0 +1,9 @@
+# Copy to terraform.tfvars and edit. terraform.tfvars is git-ignored.
+region             = "ap-southeast-1"
+environment        = "dev"
+owner              = "jannat"
+instance_type      = "t3.micro"
+enable_nat_gateway = false
+
+# key_name          = "my-keypair"
+# ssh_allowed_cidrs = ["203.0.113.10/32"]   # your public IP

@@ -1,0 +1,12 @@
+# LocalStack: a local AWS emulator, so the Terraform code can be tested without an AWS account.
+services:
+  localstack:
+    image: localstack/localstack:3
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=ec2,s3,sts,iam
+      - DEBUG=0
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
